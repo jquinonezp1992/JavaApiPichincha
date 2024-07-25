@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "9240fa74-c509-40e4-89b7-39c234bf9cf5",
+		"name": "TEST-BANCO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9098094",
+		"_collection_link": "https://bold-space-178294.postman.co/workspace/API~ec58737e-653e-4e0b-9c70-85f58b2bddbe/collection/9098094-9240fa74-c509-40e4-89b7-39c234bf9cf5?action=share&source=collection_link&creator=9098094"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Insertar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Jorge Quiñonez\",\n    \"genero\": \"M\",\n    \"edad\": 30,\n    \"identificacion\": \"1234567890\",\n    \"direccion\": \"Milagro\",\n    \"telefono\": \"098254785\",\n    \"clienteId\": \"jquinonez\",\n    \"contraseña\": \"12345\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Cliente Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cliente Por Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Jorge Quiñonez\",\n    \"genero\": \"M\",\n    \"edad\": 30,\n    \"identificacion\": \"1234567890\",\n    \"direccion\": \"Milagro\",\n    \"telefono\": \"098254785\",\n    \"clienteId\": \"jquinonez\",\n    \"contraseña\": \"12345\",\n    \"estado\" : true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente Por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Insertar Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\": \"0987654321\",\n    \"tipo\": \"Ahorros\",\n    \"saldoInicial\": 20000.00,\n    \"clienteId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Cuenta Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cuenta Por Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\": \"1234567890\",\n    \"tipo\": \"Ahorros\",\n    \"saldoInicial\": 200000,\n    \"estado\" : false,\n    \"clienteId\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cuenta Por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Insertar Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipo\": \"Ahorros\",\n    \"valor\": 500,\n    \"cuenta\": {\n        \"cuentaId\": 1  // ID de la cuenta asociada\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Movimiento Por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Movimiento Por Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipo\": \"Ahorros\",\n    \"valor\": 1000,\n    \"cuenta\": {\n        \"cuentaId\": 1  // ID de la cuenta asociada\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Movimiento Por Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Reporte Por Fecha y Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/reportes?clienteId=1&fechaInicio=2024-07-25&fechaFin=2024-07-25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "1"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-07-25"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2024-07-25"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
